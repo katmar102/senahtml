@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 - Landing Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: #601f1f;
+      background-color: #f9fbfd;
+    }
+
+    @keyframes entradaHero {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Encabezado Mobile First */
+    header {
+      background-color: #273d1f;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      padding: 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #34495e;
+      color: #00d1b2;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+    }
+
+    .hero-titulo {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      animation: entradaHero 0.8s ease-out forwards;
+    }
+
+    .hero-parrafo {
+      margin-bottom: 1.5rem;
+      animation: entradaHero 0.8s ease-out 0.2s forwards;
+      opacity: 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: #00d1b2;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      animation: entradaHero 0.8s ease-out 0.4s forwards;
+      opacity: 0;
+    }
+
+    .cta-btn:hover {
+      background-color: #00b89c;
+      transform: scale(1.05);
+    }
+
+    /* Ícono flotante decorativo */
+    .icono-flotante {
+      display: inline-block;
+      font-size: 2rem;
+      margin-top: 15px;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    /* Características */
+    .caracteristicas {
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tarjeta {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-top: 4px solid #00d1b2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #273d1f;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 600px) {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+      nav {
+        flex-direction: row;
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-titulo { font-size: 2.8rem; }
+      .caracteristicas { flex-direction: row; }
+      .tarjeta { flex: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, .hero-titulo, .hero-parrafo, .cta-btn, .icono-flotante {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2></h2>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#caracteristicas">Conocenos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1 class="hero-titulo">Construye software a velocidad luz</h1>
+    <p class="hero-parrafo">Plataforma diseñada para optimizar flujos de desarrollo responsive y modernos.</p>
+    <a href="#contacto" class="cta-btn">Empezar Ahora</a>
+    <br>
+    <span class="icono-flotante">🤖🚀🤖</span>
+  </section>
+
+  <main class="caracteristicas" id="caracteristicas">
+    <article class="tarjeta">
+      <h3>Aplicaciones</h3>
+      <p>Estilos optimizados desde dispositivos móviles hasta monitores de alta resolución.</p>
+    </article>
+    <article class="tarjeta">
+      <h3>Animaciones</h3>
+      <p>Transiciones optimizadas mediante aceleración por hardware.</p>
+    </article>
+    <article class="tarjeta">
+      <h3>Soporte</h3>
+      <p>Soporte de movimiento reducido y esquemas de color.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 KATHERINE MARIN - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
+    
+</body>
+</html>
